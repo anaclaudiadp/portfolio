@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+    <header id="header">
+        <div id="logo">
+        <h1>Ana Pimentel</h1>
+        </div>
+    <div id="menu">
+        <div id="menu">
+        <a href="index.html">Sobre mim</a>
+        <a href="formacao.html">Formacao</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contato.html">Contato</a>
+    </div>
+    </div>
+    </header>
+    <div id="content">
+        <!-- Seção de Contato -->
+<section class="secao-contato">
+    <h3>Entre em Contato</h3>
+    <form id="form-contato" class="formulario-contato">
+        <div class="formulario-campo">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+        </div>
+
+        <div class="formulario-campo">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+        </div>
+
+        <div class="formulario-campo">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
+        </div>
+
+        <button type="submit" class="botao-enviar">Enviar Mensagem</button>
+    </form>
+</section>
+    </div>
+    <footer>
+        <p>Todos os direitos reservados - Ana Pimentel</p>
+    </footer>
+      
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.getElementById("form-contato");
+
+    formulario.addEventListener("submit", function (evento) {
+        // Pega os valores digitados nos campos
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const mensagem = document.getElementById("mensagem").value.trim();
+
+        // Validação simples: verifica se algum campo está vazio
+        if (nome === "" || email === "" || mensagem === "") {
+            alert("Por favor, preencha todos os campos antes de enviar!");
+            evento.preventDefault(); // Impede que o formulário seja enviado vazio
+            return;
+        }
+
+        // Validação básica de e-mail (verifica se tem o símbolo '@')
+        if (!email.includes("@") || !email.includes(".")) {
+            alert("Por favor, insira um endereço de e-mail válido.");
+            evento.preventDefault();
+            return;
+        }
+
+        // Se passar por todas as validações:
+        alert("Mensagem enviada com sucesso!");
+    });
+});
+    </script>
+     
+     
+</body>
+</html>

@@ -1,0 +1,287 @@
+/*
+****** Limpar formatacoes ******
+*/
+
+* {
+margin: 0;
+padding: 0;
+
+}
+
+
+
+/*
+****** Formatacoes Genericas ******
+*/
+
+body {
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #c4c4c4;
+    overflow-y: auto;
+    padding-bottom: 100px;
+}
+
+h1 {
+    color: #252525;
+    font-size: 40px;
+}
+
+h2 {
+    color: #3498db;
+}
+
+h3 {
+    color: #535353;
+    background-color: #cccccc;
+    padding: 5px;
+}
+/*
+****** Header ******
+*/
+
+#header {
+    background-color: #3498db;
+    padding: 15px;
+    text-align: center;
+}
+
+#logo, #menu {
+    padding: 10px;
+}
+
+#header a:link, #header a:visited {
+    color: #FFFFFF;
+    padding: 8px 12px;
+}
+
+#header a:hover {
+    background-color: #FFFFFF;
+    color: #06c;
+    text-decoration: none;
+}
+
+.white  {
+    color: FFFFFF;
+}
+
+/*
+****** Content ******
+*/
+
+#content {
+    width: 70%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/*
+****** Sobre mim ******
+*/
+
+#minha-foto {
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+#minha-foto img{
+   
+   
+    width: 250px;
+    height: auto;
+}
+
+/*
+****** Formacao ******
+*/
+
+.lista-formacao {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto 0 auto;
+    text-align: left;
+    display: inline-block;
+    
+}
+
+.lista-formacao li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 20px;
+    line-height: 1;
+    color: #333333;
+}
+
+.lista-formacao li::before {
+    content:"\2714";
+    color: #067bff;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0px;
+}
+
+.lista-formacao strong {
+    color: #222;
+    font-size: 16px;
+    display: block;
+}
+
+.lista-formacao span {
+    color: #666;
+    font-size: ;
+}
+
+/*
+****** Contato ******
+*/
+
+.secao-contato {
+    margin-top: 0px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    text-align: left;
+}
+
+.secao-contato h3 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.formulario-campo {
+    margin-bottom: 15px;
+}
+
+.formulario-campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333333;
+    font-size: 14px;
+}
+
+.formulario-campo input,
+.formulario-campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    box-sizing: border-box; /* Garante que o padding não estoure a largura */
+    transition: border-color 0.2s;
+}
+
+.formulario-campo input:focus,
+.formulario-campo textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.botao-enviar {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.botao-enviar:hover {
+    background-color: #2980b9;
+}
+
+/*
+****** Portfolio ******
+*/
+
+.secao-trabalhos {
+    margin-top: 0px;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+    text-align: left;
+}
+
+.secao-trabalhos h3 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+.projetos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projeto-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.projeto-card img{
+    max-width: 90%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.projeto-card h4 {
+    color: #3498db;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.projeto-card p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.projeto-tec {
+    display: inline-block;
+    background-color: #eaf2f8;
+    color: #2980b9;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/*
+****** Footer ******
+*/
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #FFFFFF;
+    color: #666666;
+    width: 100%;
+    font-size: 14px;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    z-index:1000;
+}
